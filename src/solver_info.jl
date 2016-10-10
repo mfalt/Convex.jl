@@ -19,7 +19,7 @@ function get_default_solver()
 end
 
 # TODO: I have not listed solvers such as CPLEX etc because I have not tested Convex with them
-solvers = [("SCS", "SCSSolver"), ("ECOS", "ECOSSolver"), ("Gurobi", "GurobiSolver"), ("Mosek", "MosekSolver"),
+solvers = [("FOS", "FOSSolver"), ("SCS", "SCSSolver"), ("ECOS", "ECOSSolver"), ("Gurobi", "GurobiSolver"), ("Mosek", "MosekSolver"),
           ("GLPKMathProgInterface", "GLPKSolverMIP")]
 
 for (dir, solver) in solvers
@@ -83,4 +83,3 @@ function can_solve_sdp(solver)
     return false
   end
 end
-
